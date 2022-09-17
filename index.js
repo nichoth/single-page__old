@@ -6,7 +6,7 @@ module.exports = function (cb, opts) {
         var href = getPath();
         page.show(href);
     }
-    process.nextTick(onpopstate);
+    setTimeout(onpopstate, 0)
 
     var fn = function (href) { return page.show(href) };
     fn.push = function (href) { return page.push(href) };

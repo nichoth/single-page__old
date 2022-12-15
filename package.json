@@ -1,26 +1,44 @@
 {
-    "name": "single-page",
-    "version": "1.1.0",
-    "description": "write single-page apps with a single callback to handle pushState events",
-    "main": "index.js",
-    "scripts": {
-        "test": "tap test/*.js"
+  "name": "@nichoth/single-page",
+  "version": "1.1.0",
+  "description": "write single-page apps with a single callback to handle pushState events",
+  "main": "index.js",
+  "scripts": {
+    "postversion": "git push && git push --tags"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/substack/single-page.git"
-    },
-    "homepage": "https://github.com/substack/single-page",
-    "keywords": [
-        "pushState",
-        "single-page",
-        "client-side",
-        "browser"
-    ],
-    "author": {
-        "name": "James Halliday",
-        "email": "mail@substack.net",
-        "url": "http://substack.net"
-    },
-    "license": "MIT"
+    "./dist": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nichoth/single-page.git"
+  },
+  "homepage": "https://github.com/nichoth/single-page",
+  "keywords": [
+    "pushState",
+    "single-page",
+    "client-side",
+    "browser"
+  ],
+  "contributors": [
+    "James Halliday <mail@substack.net> (http://substack.net)",
+    "Nick Thomas <nichoth@gmail.com> (https://nichoth.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nichoth/single-page/issues"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {
+    "esbuild": "^0.16.7"
+  }
 }

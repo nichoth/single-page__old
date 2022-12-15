@@ -1,10 +1,11 @@
+var singlePage = require('../');
+
 var divs = {
     foo: document.querySelector('#foo'),
     bar: document.querySelector('#bar'),
     baz: document.querySelector('#baz')
 };
 
-var singlePage = require('../');
 var showPage = singlePage(function (href) {
     Object.keys(divs).forEach(function (key) {
         hide(divs[key]);

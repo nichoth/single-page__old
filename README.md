@@ -1,9 +1,14 @@
 # single-page
+Write single-page apps with a single callback to handle pushState events
 
-write single-page apps with a single callback to handle pushState events
+Like the classic [@subtack module](https://www.npmjs.com/package/single-page), but now with ESM + CJS versions.
 
-# example
+## install
+```
+npm i -S @nichoth/single-page
+```
 
+## example
 Given some html with elements `#foo`, `#bar`, and `#baz`:
 
 ``` html
@@ -85,13 +90,13 @@ Now when you go to `http://localhost:5000` and click around, you'll see `/foo`,
 `/bar` and `/baz` in the address bar when you click links, even though you're
 not reloading the page.
 
-# methods
+## methods
 
 ``` js
 var singlePage = require('single-page')
 ```
 
-## var showPage = singlePage(cb, opts)
+### var showPage = singlePage(cb, opts)
 
 Fire `cb(href, page)` at the start and whenever the page navigation changes so
 you can update the page contents accordingly.
@@ -100,25 +105,14 @@ If `opts.saveScroll` is `!== false`, `page.scrollX` and `page.scrollY` are saved
 for every unique `href` so that you can jump back to the same scroll position
 that the user left off at.
 
-## showPage(href)
+### showPage(href)
 
 Navigate to `href`, firing the callback passed to singlePage.
 
-## showPage.push(href)
+### showPage.push(href)
 
 Update the location href in the address bar without firing any callbacks.
 
-# install
-
-With `npm` do:
-
-```
-npm install single-page
-```
-
-Use [browserify](http://browserify.org) do bundle this module into your
-application.
-
-# license
+## license
 
 MIT

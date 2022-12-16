@@ -1,4 +1,4 @@
-export default function singlePage (cb, opts) {
+export function singlePage (cb, opts) {
     var page = new Page(cb, opts);
     window.addEventListener('popstate', onpopstate);
 

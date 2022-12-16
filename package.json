@@ -2,11 +2,13 @@
   "name": "@nichoth/single-page",
   "version": "1.1.0",
   "description": "write single-page apps with a single callback to handle pushState events",
-  "main": "src/index.mjs",
+  "type": "module",
+  "main": "index.mjs",
   "scripts": {
     "build": "node ./build.js",
     "postversion": "git push && git push --tags",
-    "test": "esbuild --bundle --platform=node test/index.cjs | htmlify test/index.html | tape-run --input=html | tap-arc"
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && browserify test/index.cjs | htmlify test/index.html | tape-run --input=html | tap-arc"
   },
   "exports": {
     "import": "./index.mjs",
@@ -36,10 +38,13 @@
   },
   "devDependencies": {
     "@socketsupply/test-dom": "^0.5.0",
+    "browserify": "^17.0.0",
+    "ecstatic": "^4.1.4",
     "esbuild": "^0.16.7",
     "inline-htmlify": "^2.0.1",
     "tap-arc": "^0.3.5",
     "tape": "^5.6.1",
-    "tape-run": "^10.0.0"
+    "tape-run": "^10.0.0",
+    "tapzero": "^0.6.1"
   }
 }

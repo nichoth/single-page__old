@@ -38,11 +38,14 @@ test('single page', t => {
     const link = document.querySelector('a[href="/foo"]')
     link?.dispatchEvent(new window.Event('click', { bubbles: true }))
 
+    // @ts-ignore
     t.ok(dom.isElementVisible(dom.qs('#foo')),
         'should be able to see "foo" div')
 
     const barLink = dom.qs('a[href="/bar"]')
     barLink?.dispatchEvent(new window.Event('click', { bubbles: true }))
+    // @ts-ignore
     t.ok(dom.isElementVisible(dom.qs('#bar')), 'should show the "bar" element')
+    // @ts-ignore
     t.ok(!dom.isElementVisible(dom.qs('#foo')), '"foo" should be hidden')
 })

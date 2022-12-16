@@ -3,6 +3,10 @@ Write single-page apps with a single callback to handle pushState events
 
 Like the classic [@subtack module](https://www.npmjs.com/package/single-page), but now with ESM + CJS versions.
 
+__featuring__
+* 0 dependencies
+* automatic ESM & CJS versions
+
 ## install
 ```
 npm i -S @nichoth/single-page

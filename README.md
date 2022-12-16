@@ -18,6 +18,17 @@ npm test
 ```
 
 ## example
+
+### ESM
+```js
+import { singlePage } from '@nichoth/single-page'
+```
+
+### CJS
+```js
+var singlePage = require('@nichoth/single-page');
+```
+
 Given some html with elements `#foo`, `#bar`, and `#baz`:
 
 ``` html

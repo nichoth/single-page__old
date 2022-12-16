@@ -12,6 +12,11 @@ __featuring__
 npm i -S @nichoth/single-page
 ```
 
+## test
+```
+npm test
+```
+
 ## example
 Given some html with elements `#foo`, `#bar`, and `#baz`:
 

@@ -1,6 +1,5 @@
 // @ts-check
-const path = require('path')
-const esbuild = require('esbuild')
+import esbuild from 'esbuild'
 
 //
 // build CJS and ESM versions
@@ -8,21 +7,11 @@ const esbuild = require('esbuild')
 async function main () {
     // cjs
     await esbuild.build({
-        entryPoints: ['src/index.js'],
+        entryPoints: ['index.mjs'],
         bundle: true,
         keepNames: true,
         format: 'cjs',
-        outfile: path.join('./dist/', 'index.js'),
-        platform: 'browser'
-    })
-
-    // esm
-    await esbuild.build({
-        entryPoints: ['src/index.js'],
-        bundle: true,
-        keepNames: true,
-        format: 'esm',
-        outfile: path.join('./dist/', 'index.esm.js'),
+        outfile: 'index.cjs',
         platform: 'browser'
     })
 }

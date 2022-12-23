@@ -1,4 +1,4 @@
-export function singlePage (cb, opts) {
+function singlePage (cb, opts) {
     var page = new Page(cb, opts);
     window.addEventListener('popstate', onpopstate);
 
@@ -65,3 +65,6 @@ function getPath () {
         + (window.location.hash || '')
     ;
 }
+
+export { singlePage }
+export default singlePage

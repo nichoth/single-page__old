@@ -1,6 +1,6 @@
 // @ts-check
 const { test } = require('tapzero')
-const dom = require('@socketsupply/test-dom')
+const dom = require('@nichoth/test-dom')
 const singlePage = require('../index.cjs').default
 
 var divs = {

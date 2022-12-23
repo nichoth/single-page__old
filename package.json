@@ -37,7 +37,7 @@
     "example": "example"
   },
   "devDependencies": {
-    "@socketsupply/test-dom": "^0.5.0",
+    "@nichoth/test-dom": "^0.6.2",
     "browserify": "^17.0.0",
     "ecstatic": "^4.1.4",
     "esbuild": "^0.16.7",

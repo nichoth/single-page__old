@@ -5,7 +5,7 @@ Like the classic [@subtack module](https://www.npmjs.com/package/single-page), b
 
 __featuring__
 * 0 dependencies
-* automatic ESM & CJS versions
+* ESM & CJS versions via package.json `exports` field
 
 ## install
 ```

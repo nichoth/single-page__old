@@ -26,7 +26,7 @@ import { singlePage } from '@nichoth/single-page'
 
 ### CJS
 ```js
-var singlePage = require('@nichoth/single-page');
+const singlePage = require('@nichoth/single-page').default
 ```
 
 Given some html with elements `#foo`, `#bar`, and `#baz`:
@@ -67,7 +67,7 @@ var divs = {
     baz: document.querySelector('#baz')
 };
 
-var singlePage = require('single-page');
+const singlePage = require('@nichoth/single-page').default
 var showPage = singlePage(function (href) {
     Object.keys(divs).forEach(function (key) {
         hide(divs[key]);
@@ -113,7 +113,7 @@ not reloading the page.
 ## methods
 
 ``` js
-var singlePage = require('single-page')
+var singlePage = require('@nichoth/single-page').default
 ```
 
 ### var showPage = singlePage(cb, opts)
